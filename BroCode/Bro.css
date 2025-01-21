@@ -1,0 +1,124 @@
+/*#mySubmit{*/
+/*    width: 100px;*/
+/*    height: 20px;*/
+/*    background-color: #007bff;*/
+/*    color: #f9f9f9;*/
+/*    border: none;*/
+/*    border-radius: 2px;*/
+/*}*/
+
+/*body{*/
+/*    font-family: Arial,sans-serif;*/
+/*    background-color: #f0f0f0;*/
+/*}*/
+
+/*h1{*/
+/*    color: #007bff;*/
+/*}*/
+
+/*form{*/
+/*    background-color: white;*/
+/*    text-align: center;*/
+/*    max-width: 350px;*/
+/*    margin: auto;*/
+/*    padding: 25px;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 5px 5px 15px black;*/
+/*}*/
+
+/*#textbox{*/
+/*    width: 50%;*/
+/*    text-align: center;*/
+/*    font-size: 2em;*/
+/*    border: 2px solid black;*/
+/*    border-radius: 4px;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+
+/*label{*/
+/*    font-size: 1.5em;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*button{*/
+/*    margin-top: 15px;*/
+/*    background-color: red;*/
+/*    font-size: 1.5em;*/
+/*    border: none;*/
+/*    padding: 10px 15px;*/
+/*    border-radius: 5px;*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*button:hover{*/
+/*    background-color: #ec6969;*/
+/*}*/
+
+/*#result{*/
+/*    font-size: 1.75em;*/
+/*    font-weight: bold;*/
+
+/*}*/
+
+/*#container{*/
+/*    font-family: Arial,sans-serif;*/
+/*    text-align: center;*/
+/*    font-size: 2rem;*/
+/*    font-weight: bold;*/
+/*}*/
+/*button{*/
+/*    font-size: 1.5rem;*/
+/*    padding: 10px 15px;*/
+/*    border-radius: 10px;*/
+/*    border: none;*/
+/*    background-color: #007bff;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*button:hover{*/
+/*    background-color: #67a7ef;*/
+/*}*/
+/*button:active {*/
+/*    background-color: #0870d5;*/
+/*}*/
+
+/*input{*/
+/*    font-size: 2rem;*/
+/*    width: 150px;*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*}*/
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+
+}
+
+span{
+    background: url("https://cdn2.iconfinder.com/data/icons/iconslandsport/PNG/256x256/Soccer_Ball.png");
+    height: 38vh;
+    width: 20vw;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 20s linear;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%, -5000%);
+        opacity: 0;
+    }
+}

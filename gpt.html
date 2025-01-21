@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепти</title>
+    <style>
+        .recipe-block {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+        .ingredients-list {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Список Рецептів</h1>
+<div id="recipes"></div>
+
+<script>
+    fetch('https://dummyjson.com/recipes')
+        .then(response => response.json())
+        .then(data => {
+            const recipesDiv = document.getElementById('recipes');
+            data.recipes.forEach(recipe => {
+                const recipeBlock = document.createElement('div');
+                recipeBlock.className = 'recipe-block';
+                recipeBlock.innerHTML = `
+                        <strong>Назва:</strong> ${recipe.title} <br>
+                        <strong>Опис:</strong> ${recipe.description} <br>
+                        <strong>Інгредієнти:</strong>
+                        <ul class="ingredients-list">
+                            ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                        </ul>
+                    `;
+                recipesDiv.appendChild(recipeBlock);
+            });
+        })
+
+</script>
+</body>
+</html>

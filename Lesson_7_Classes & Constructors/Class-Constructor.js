@@ -361,6 +361,256 @@
 
 
 
+// Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+// створити пустий масив, наповнити його 10 об'єктами new User(....)
+
+//  function User (id,name,surname,email,phone) {
+//     this.id = id;
+//     this.name = name;
+//     this.surname = surname;
+//     this.email = email;
+//     this.phone = phone;
+//  }
+//
+//   let users = [
+//          new User(1,'Semen','Alen','gaba@mamail.com','+380980980'),
+//          new User(2,'Igor','Svist','fava@mamail.com','+380980985'),
+//          new User(5,'Katya','Koval','kara@mamail.com','+380980785'),
+//          new User(7,'Sveta','Shoka','saka@mamail.com','+380989785'),
+//          new User(8,'Lina','Koka','koka@mamail.com','+380989725'),
+//          new User(9,'Kira','Zames','gila@mamail.com','+3809897254'),
+//          new User(11,'Jenya','Kravec','viva@mamail.com','+38098972549'),
+//          new User(14,'Vova','Karmanov','jora@mamail.com','+380989725492'),
+//          new User(19,'Nikita','Sugov','niki@mamail.com','+3809897254923'),
+//          new User(21,'Masha','Kolos','kolo@mamail.com','+380989725923'),
+//   ]
+//
+//  let UserFilter = users.filter(value => value.id % 2 === 0);
+// console.log(UserFilter);
+//
+// let UserSort = users.sort((user1,user2)=> user1.id - user2.id);
+// console.log(UserSort);
+
+// створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+// створити пустий масив, наповнити його 10 об'єктами Client
+
+ // class Client{
+//
+//     constructor(id,name,surname,email,phone,order){
+//          this.id = id;
+//          this.name = name;
+//          this.surname = surname;
+//          this.email = email;
+//          this.phone = phone;
+//          this.order = order;
+//      }
+//
+//  }
+// let users = [
+//     new Client(1,'Semen','Alen','asd@mail.com','+380980980',['kettle','bottle','tv','hokcet']),
+//     new Client(2,'Igor','Svist','qwe@mail.com','+380980985',['fen','cup','milk','soccer','car']),
+//     new Client(3,'Katya','Koval','rty@mail.com','+380980785',['tea','coffee']),
+//     new Client(4,'Sveta','Shoka','yui@mail.com','+380989785',['picture','light','tea','shnaps']),
+//     new Client(5,'Lina','Koka', 'iop@mail.com','+380989725',['car', 'lighter','water']),
+//     new Client(6,'Kira','Zames','kll@mail.com','+3809897254',['meat','clothes','socks','jeans']),
+//     new Client(7,'Jenya','Kravec','bnm@gmail.com','+38098972549',['t-shirt','wallet','pocket']),
+//     new Client(8,'Vova','Karmanov','vbn@mail.com','+380989725492',['t-shirt','wallet','pocket']),
+//     new Client(9,'Nikita','Sugov','zxc@mail.com','+3809897254923',['t-shirt','wallet','pocket']),
+//     new Client(10,'Masha','Kolos','mkt@mail.com','+380989725923',['t-shirt','wallet','pocket']),
+//
+//
+// ]
+//
+// let sortOfOrders = users.sort((value1,value2) => value1.order.length-value2.order.length);
+// console.log(sortOfOrders);
+
+
+    // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+
+
+// Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+// -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+
+// function Driver(name,age,experience){
+//     this.name = name;
+//     this.age = age;
+//     this.experience = experience;
+
+//  function Car(model,produce,year,maxSpeed,engineVolume) {
+//      this.model = model;
+//      this.produce = produce;
+//      this.year = year;
+//      this.maxSpeed = maxSpeed;
+//      this.engineVolume = engineVolume;
+//
+//     this.drive = function() {
+//          console.log(`їдемо зі швидкістю ${maxSpeed} на годину`)
+//
+//
+//      };
+//
+//     this.info = function () {
+//          for (const valueOfFields in this) {
+//              console.log(valueOfFields, this[valueOfFields])
+//          }
+//      }
+//
+//     this.increaseMaxSpeed = function (newSpeed) {
+//          maxSpeed = maxSpeed + newSpeed;
+//      }
+//
+//     this.year = function (newValue) {
+//          this.year =  newValue
+//      }
+//
+//      this.changeYear = function (newValue){
+//          if(newValue > 1815) this.year = newValue
+//
+//      }
+//
+//      this.addDriver = function (driverObject){
+//             if(driverObject) this.driver = driverObject
+//              this.driver = driverObject
+//      }
+//
+//  }
+//     let cars =  [
+//         new Car('Honda','Japan',2017,350,3.5,),
+//         new Car('Toyota','Japan',2018,300,3.0),
+//         new Car('Mazda','Japan',2019,320,3.2),
+//         new Car('Nissan','Japan',2020,330,3.3),
+//         new Car('Subaru','Japan',2021,340,3.4),
+//         new Car('Suzuki','Japan',2022,360,3.6),
+//         new Car('Mitsubishi','Japan',2023,370,3.7),
+//         new Car('Lexus','Japan',2024,380,3.8),
+//         new Car('Infinity','Japan',2025,390,3.9),
+//         new Car('Acura','Japan',2026,400,4.0),
+//
+//     ]
+// for (const car of cars) {
+//
+//     console.log(car);
+//
+// }
+
+// class Car {
+//     constructor(model,produce,year,maxSpeed,engineVolume) {
+//         this.model = model;
+//         this.produce = produce;
+//         this.year = year;
+//         this.maxSpeed = maxSpeed;
+//         this.engineVolume = engineVolume;
+//     }
+//     drive() {
+//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
+//     }
+//     info() {
+//         for (const valueOfFields in this) {
+//             console.log(valueOfFields, this[valueOfFields])
+//         }
+//     }
+//     increaseMaxSpeed(newSpeed) {
+//         this.maxSpeed = this.maxSpeed + newSpeed;
+//     }
+//     changeYear(newValue) {
+//         if(newValue > 1815) this.year = newValue;
+//     }
+//     addDriver(driverObject) {
+//         if(driverObject) this.driver = driverObject
+//     }
+//
+//
+// }
+// let car = new Car('Honda','Japan',2017,350,3.5);
+// console.log(car);
+// car.drive();
+// car.info();
+// car.increaseMaxSpeed(100);
+// car.changeYear(2002);
+// car.addDriver({name:'Vasya',age:25,experience:5});
+
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+//     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+class Cinderella {
+
+     constructor(name,age,sizeFeet){
+        this.name = name;
+        this.age = age;
+        this.sizeFeet = sizeFeet;
+    }
+
+}
+
+class Prince {
+    constructor(name, age, shoe) {
+        this.name = name;
+        this.age = age;
+        this.shoe = shoe;
+    }
+
+}
+
+    let cinderellas = [
+        new Cinderella('Sonya',15,28),
+        new Cinderella('Katya',14,27),
+        new Cinderella('Lena',16,26),
+        new Cinderella('Valya',17,30),
+        new Cinderella('Jenya',16,27),
+        new Cinderella('Elvira',19,31),
+        new Cinderella('Xena',14,27),
+        new Cinderella('Anna',19,29),
+        new Cinderella('Nina',13,25),
+        new Cinderella('Sara',17,28),
+ ]
+
+const prince = new Prince('Garold',22,29);
+
+
+
+  let findRightShoe = cinderellas.filter(cinderella => cinderella.sizeFeet === prince.shoe);
+  console.log(findRightShoe);
+
+  let findRightCinderella = cinderellas.find(cinderella => cinderella.sizeFeet === 29);
+  console.log(findRightCinderella);
+
+  let sortCinderellas = cinderellas.sort((cinderella1,cinderella2)=> cinderella1.age - cinderella2.age);
+  console.log(sortCinderellas);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

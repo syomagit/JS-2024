@@ -1,0 +1,143 @@
+/*body{*/
+/*    margin: 0;*/
+/*    height: 100vh;*/
+/*    background-color: black;*/
+
+/*}*/
+
+/*span{*/
+/*    background: url("https://cdn2.iconfinder.com/data/icons/iconslandsport/PNG/256x256/Soccer_Ball.png");*/
+/*    height: 38vh;*/
+/*    width: 20vw;*/
+/*    position: absolute;*/
+/*    pointer-events: none;*/
+/*    background-size: cover;*/
+/*    left: 50%;*/
+/*    top: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    animation: animate 20s linear;*/
+/*}*/
+
+/*@keyframes animate {*/
+/*    0%{*/
+/*        transform: translate(-50%, -50%);*/
+/*        opacity: 1;*/
+/*    }*/
+/*    100%{*/
+/*        transform: translate(-50%, -5000%);*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
+
+
+
+/*auto text effect animation*/
+/*@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');*/
+/*body{*/
+/*    margin: 0;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    height: 100vh;*/
+/*    align-items: center;*/
+/*    background-color: salmon;*/
+/*    font-family: "Permanent Marker", cursive;*/
+
+/*}*/
+
+
+/*dynamic calendar*/
+
+/*body{*/
+/*    margin: 0;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    height: 100vh;*/
+/*    align-items: center;*/
+/*    font-family: cursive;*/
+/*    background-color:  slateblue;*/
+
+/* }*/
+
+/*.mini-calendar{*/
+/*    background-color: #fff;*/
+/*    width: 300px;*/
+/*    text-align: center;*/
+/*    border-radius: 20px;*/
+/*    box-shadow: 0 4px 8px 0;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.month-name{*/
+/*    margin: 0;*/
+/*    background-color: orangered;*/
+/*    color: white;*/
+/*    padding: 10px;*/
+/*    font-size: 30px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.day-name{*/
+/*font-size: 20px;*/
+/*    color: darkgrey;*/
+
+
+/*}*/
+
+/*.day-number{*/
+/*    font-size: 90px;*/
+/*    margin: 0;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.year{*/
+/*    margin: 20px 0;*/
+/*    font-size: 20px;*/
+/*    color: darkgrey;*/
+/*    font-weight: bold;*/
+
+/*}*/
+
+
+/*loading bar*/
+
+/*body{*/
+/*    margin: 0;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    height: 100vh;*/
+/*    align-items: center;*/
+/*    background-color: black;*/
+/*    color: lightgrey;*/
+/*   font-family: sans-serif;*/
+/*}*/
+
+/*.container{*/
+/*    text-align: center;*/
+/*    width: 400px;*/
+/*    position: relative;*/
+/*}*/
+
+/*.counter{*/
+/*    font-size: 40px;*/
+/*}*/
+
+/*.loading-bar-back{*/
+/*    position: absolute;*/
+/*    height: 8px;*/
+/*    background-color: lightgrey;*/
+/*    width: 100%;*/
+/*    border-radius: 5px;*/
+/*    border: none;*/
+/*}*/
+
+/*.loading-bar-front{*/
+/*    position: absolute;*/
+/*    height: 8px;*/
+/*    background-color: orangered;*/
+/*    width: 0%;*/
+/*    border-radius: 5px;*/
+/*    border: none;*/
+/*}*/
+
+
+

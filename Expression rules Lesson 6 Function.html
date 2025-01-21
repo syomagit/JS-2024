@@ -91,7 +91,7 @@
 //     users.forEach(value => console.log(value)); //стрфлочна функція
 
 
-
+    //
     // let users = [
     //     {name: 'vasya', age: 31, status: false},
     //     {name: 'petya', age: 30, status: true},
@@ -105,7 +105,7 @@
     //     {name: 'olya', age: 31, status: false},
     //     {name: 'max', age: 31, status: true}
     // ];
-    // let sortUser =  users.sort((user1,user2)=> user1.age - user2.age)
+    // let sortUser =  users.sort((user1,user2)=> user2.age - user1.age)
     // console.log(sortUser)
 
 
@@ -130,8 +130,8 @@
     // Filter  повертає булеве значення
 
     // let resultFilter = users.filter(function (user) {   // в сереині також коллбек function
-    //     return user.status;// не потрібно порівнювати чи дорівнює статус true функція про це знає и повертає статус тру юїерів
-        // Замість статус можна підставити будь-які перевірки наприклад user.age > 30 виведе
+    //     return !user.status;// не потрібно порівнювати чи дорівнює статус true функція про це знає и повертає статус тру юїерів
+    //     // Замість статус можна підставити будь-які перевірки наприклад user.age > 30 виведе
     // }); // що б отримати юзерів зі статусом false в return перед user поставити '!'
     // console.log(resultFilter);
     // let resultFilter = users.filter(user => user.status) стрілочною
@@ -151,20 +151,20 @@
 
 
 // фільтрація за monthDuration методом стрілочної
-//     let resultMonthFilter = coursesAndDurationArray.filter(month => month.monthDuration > 5);
-//     console.log(resultMonthFilter);
+    let resultMonthFilter = coursesAndDurationArray.filter(month => month.monthDuration > 5);
+    console.log(resultMonthFilter);
 // -- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration} map створює новий массив зі змінами який я вніс
-    //функцією map можна додавати значення нові в массив для чогось Приклад user.id = число таким чином додається нове значення після return user;
-    // let mapNewResult = coursesAndDurationArray.map((value,index)=>{
-    //     let newField ={  // таким чином ми стоврюємо новий едемент або обьєкт залишаючи оригінальний массив не змінним
-    //         id: index +1,
-    //         title:value.title,
-    //         monthDuration: value.monthDuration
-    //     }
-    //     return newField;
-    // });
-    // console.log(mapNewResult);
-    // console.log(coursesAndDurationArray);
+//     функцією map можна додавати значення нові в массив для чогось Приклад user.id = число таким чином додається нове значення після return user;
+//     let mapNewResult = coursesAndDurationArray.map((value,index)=>{
+//         let newField ={  // таким чином ми стоврюємо новий едемент або обьєкт залишаючи оригінальний массив не змінним
+//             id: index +1,
+//             title:value.title,
+//             monthDuration: value.monthDuration
+//         }
+//         return newField;
+//     });
+//     console.log(mapNewResult);
+//     console.log(coursesAndDurationArray);
 
     // let mapNewResult = coursesAndDurationArray.map((value,genre)=> {
     //     let newField = {
@@ -407,34 +407,31 @@
 
 //додавання обьексу в массив
 
-    // function Cinderella(name,age,sizeFeet){
-    //     this.name = name;
-    //     this.age = age;
-    //     this.sizeFeet = sizeFeet;
-    // }
-    //
-    // let Cinderellas = [
-    //     new Cinderella('Sonya',15,28),
-    //     new Cinderella('Katya',14,27),
-    //     new Cinderella('Lena',16,26),
-    //     new Cinderella('Valya',17,30),
-    //     new Cinderella('Jenya',16,27),
-    //     new Cinderella('Elvira',19,31),
-    //     new Cinderella('Xena',14,27),
-    //     new Cinderella('Anna',19,29),
-    //     new Cinderella('Nina',13,25),
-    //     new Cinderella('Sara',17,28),
-    // ];
-    //
-    // function addObjectToCinderella(obj){
-    //     Cinderellas.push(obj)
-    // }
-    //
-    // addObjectToCinderella({name:'Klara',age:35,sizeFeet:38});
-    // console.log(Cinderellas);
+    function Cinderella(name,age,sizeFeet){
+        this.name = name;
+        this.age = age;
+        this.sizeFeet = sizeFeet;
+    }
 
+    let Cinderellas = [
+        new Cinderella('Sonya',15,28),
+        new Cinderella('Katya',14,27),
+        new Cinderella('Lena',16,26),
+        new Cinderella('Valya',17,30),
+        new Cinderella('Jenya',16,27),
+        new Cinderella('Elvira',19,31),
+        new Cinderella('Xena',14,27),
+        new Cinderella('Anna',19,29),
+        new Cinderella('Nina',13,25),
+        new Cinderella('Sara',17,28),
+    ];
 
+    function addObjectToCinderella(obj){
+        Cinderellas.push(obj)
+    }
 
+    addObjectToCinderella({name:'Klara',age:35,sizeFeet:38});
+    console.log(Cinderellas);
 
 
 

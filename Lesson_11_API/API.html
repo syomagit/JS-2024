@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    .carts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .carts div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .carts ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .carts li {
+        margin: 5px;
+    }
+</style>
+<body>
+
+<div class="carts"></div>
+
+
+<script>
+
+  // - взяти https://dummyjson.com/docs/recipes та вивести інформацію про всі рецепти. Інгредієнти повинні бути список під час відображення.
+
+
+  let carts = document.querySelector('.carts');
+
+  fetch('https://dummyjson.com/recipes')
+          .then(res => res.json())
+          .then(recipesObject => {
+           let {recipes} = recipesObject;
+            for (const recipe of recipes) {
+           let div = document.createElement('div');
+           div.innerHTML = `<h3>${recipe.name}</h3>`
+              carts.appendChild(div);
+           let {ingredients} = recipe;
+              for (const ingredient of ingredients) {
+                let ul = document.createElement('ul');
+                let li = document.createElement('li');
+                li.innerText = ingredient;
+                ul.appendChild(li);
+                div.appendChild(ul);
+
+
+              }
+              
+            }
+          })
+
+
+</script>
+</body>
+</html>

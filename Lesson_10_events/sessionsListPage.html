@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+
+  div {
+    height: 100px;
+    width: 100px;
+  }
+</style>
+<body>
+
+
+
+
+
+<script>
+
+
+ let timeVisitPage = localStorage.getItem('sessionList');
+    let timeVisitPageArr = JSON.parse(timeVisitPage);
+ for (const visit of timeVisitPageArr) {
+        let div = document.createElement('div');
+        div.innerHTML = visit;
+        document.body.appendChild(div);
+
+ }
+
+
+</script>
+</body>
+</html>

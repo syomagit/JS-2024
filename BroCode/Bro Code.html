@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Bro.css">
+</head>
+<body>
+
+<!--приклад виводу коритсувача через інпут в консоль та модальне вікно-->
+<!--<h1>You</h1>-->
+
+<!--<label> username: </label>-->
+<!--<input id="text">-->
+<!--<button id="mysub">submit</button>-->
+
+<!--<h1 id="myh1">Welcome</h1>-->
+
+<!--<label>username:</label>-->
+<!--<input id="mytext"><br><br>-->
+<!--<button id="mysubmit">submit</button>-->
+
+<!--<label>enter your age</label>-->
+<!--<input type="text" id="myText">-->
+<!--<button type="submit" id="mySubmit">submit</button>-->
+<!--<p id="resultElement"></p>-->
+
+<!--examples if-->
+<!--<input type="checkbox" id="myCheckbox">-->
+<!--<label for="myCheckbox">Subscribe</label><br>-->
+
+<!--<input type="radio" id="visaBtn" name="card">-->
+<!--<label for="visaBtn">Visa</label><br>-->
+<!--<input type="radio" id="masterCardBtn" name="card">-->
+<!--<label for="masterCardBtn">Mastercard</label><br>-->
+<!--<input type="radio" id="payPalBtn" name="card">-->
+<!--<label for="payPalBtn">PayPal</label><br>-->
+<!--<button type="submit" id="mySubmit">submit</button>-->
+<!--<p id="subResult"></p>-->
+<!--<p id="paymentResult"></p>-->
+
+
+<!--<form>-->
+<!--    <h1>Temperature conversion</h1>-->
+<!--    <input type="number" id="textbox" value="0"><br>-->
+
+<!--    <input type="radio" id="toFahrenheit" name="unit">-->
+<!--    <label for="toFahrenheit">Celsius to Fahrenheit</label><br>-->
+
+<!--    <input type="radio" id="toCelsius" name="unit">-->
+<!--    <label for="toCelsius">Fahrenheit to Celsius </label><br>-->
+
+<!-- <button type="button" onclick="convert()">submit</button>-->
+
+<!--    <p id="result"></p>-->
+<!--</form>-->
+
+<!--<form id="f1" name="username">-->
+<!--    <input id="vi">-->
+<!--    <button>send</button>-->
+
+<!--    </form>-->
+
+<!--<h1 id="myH1"></h1>-->
+
+<!--<div id="carts"></div>-->
+<span></span>
+<script src="Bro.js">
+// Початок змінні
+
+  // let age = 34;
+  // let price = 9.99;
+  // let gender = 'male';
+  // console.log(typeof price); // перевірка до чого належить змінна
+  // console.log(`My name is Semen ${age} `); // приклад інтерпуляції
+  // console.log(`I want to buy it for ${price}`);
+
+// let firstName = 'Simon'; //рпиклад зміінної стрінги
+// console.log(`My name is ${firstName}`); //приклад інтерпулції
+
+
+//arithmetics variable
+
+// let students = 30;
+// students = students +1;  //множити ділити можна
+// console.log(students); //31
+// students = students -1;
+// console.log(students);//30
+
+
+//How to accept user input
+//easy way
+//  let username;
+//  username =prompt('Who are you?'); //модальне вікно prompt
+// console.log(username); //так виводить те що  писали в prompt
+
+//profi way- початок в body
+// let username;
+// document.getElementById('mysub').onclick = function (){
+//   username = document.getElementById('text').value;
+// console.log(username);
+// }
+
+//зміна типу на інше значення елементу(strings,numbers,booleans)
+
+  // let age = prompt('how old are you?');
+  // age = Number(age);
+  // console.log(age, typeof age);
+
+// let x = 'pizza'; //також можна підатсавити цифри що завгодно та потім нижече ковертнути
+// let y = 'pizza';
+// let z = '0';
+//
+// x = Number(x);
+// y = String(y);
+// z = Boolean(z);
+//
+// console.log(x,typeof x); //number
+// console.log(y,typeof y); //string
+// console.log(z,typeof z); //boolean
+
+// приклад застосування події onclick рпи заповенені форми значення з форми після натискання на кнопку виводит ься в консоль
+// let username;
+// document.getElementById('mysubmit').onclick = function(){
+//     username = document.getElementById('mytext').value;
+//     document.getElementById('myh1').innerText = `Hello ${username}`
+//
+// }
+
+
+//if condition
+// let age = 17;
+// if(age >=18){
+//     console.log('you are old enough for this site')
+// }
+// else{
+//     console.log('you must be 18+')
+//
+
+// let time = 9;
+// if(time < 12){
+//     console.log('good morning')
+//
+// }else{
+//     console.log('good afternoon')
+// }
+
+// let isStudent = true;
+// if(isStudent){
+//     console.log('you are a student')
+// }else{
+//     console.log('you are not a student')
+// }
+
+// let age = 15;
+// let haslicense = false;
+// if(age >= 16){
+//     console.log('You can drive')
+//
+//     if(haslicense){
+//         console.log('you have your license')
+//     }
+//     else{
+//         console.log('you do not have your license yet!')
+//     }
+//
+// }else{
+//     console.log('you can not drive yet')
+// }
+
+
+// const myText = document.getElementById('myText');
+// const mySubmit = document.getElementById('mySubmit');
+// const resultElement = document.getElementById('resultElement');
+// let age;
+//
+// mySubmit.onclick = function (){
+//     age = myText.value
+//     age = Number(age);
+//     if(age >=18){
+//         resultElement.innerText = `You are old enough`;
+//     }
+//     else if(age < 0){
+//         resultElement.innerText = `your age can not be identify`;
+//
+//     }
+//     else{
+//         resultElement.innerText = `You should be older`;
+//     }
+// }
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

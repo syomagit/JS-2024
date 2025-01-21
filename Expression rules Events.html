@@ -18,7 +18,10 @@
        /*     display: block;*/
        /*     width: 200px;*/
        /* }*/
-
+img{
+    width: 100px;
+    height: 100px;
+}
     </style>
 </head>
 <body>
@@ -34,6 +37,7 @@
 <!--створюємо div для нашої корзини.будувати в середині будемо динамічно в скрипті-->
 <!--<div class="products">-->
 
+<div class="goods"></div>
 <!--</div>-->
 <script>
     // let goal = document.getElementById('goal');
@@ -41,7 +45,7 @@
     //     console.log('boom'); // при натисканні на наш дів виводить кожен раз boom
     //     console.log(ev);
     // };
-    //часто використовувана подія onmouse
+    // часто використовувана подія onmouse
     //      goal.onmousemove = function (ev) { // також визначаємо аргумент ивент.Так нам показує клієнтську позицію тобто де ми рухали мишею
     //     console.log('move'); // при тому як ми рухаємо наш div в консолі зчитуються ці рухи
     //     console.log(ev);
@@ -49,7 +53,7 @@
     //     // console.log(ev.clientX,ev.clientY); // бачимо координації руху
     //
     // }
-
+    //
     // що б додавати нові події до існуючої події  треба вик.addEventListener.Перший аргумент це подія на чку вішаємл
 
     // goal.addEventListener('click', function (ev) { // до події ми звертаємось onclick коли додаємо в Listener то без приставки on,так з усіма подіями on
@@ -119,8 +123,8 @@
 //         {name: 'olya', age: 31, status: false},
 //         {name: 'max', age: 31, status: true}
 //     ];
-
-    // localStorage.setItem('users', JSON.stringify(users)); // додали массив в storage/можна закоментувати закрити і працювати далі з нашим массивом
+//
+//     localStorage.setItem('users', JSON.stringify(users)); // додали массив в storage/можна закоментувати закрити і працювати далі з нашим массивом
 
     // let takeUsers = localStorage.getItem('users');
     // console.log(takeUsers); //знову дістали наш массив але стрінгою поки
@@ -189,6 +193,64 @@
     // }
 
 
+
+//     function populateStorage() {
+//         localStorage.setItem("bgcolor", "red");
+//         localStorage.setItem("font", "Helvetica");
+//         localStorage.setItem("image", "myCat.png");
+//     }
+//
+// populateStorage();
+
+
+    localStorage.clear();
+
+
+  const blockgoods =  document.getElementsByClassName('goods')[0];
+    let products = [
+        {
+            title: 'milk',
+            price: 22,
+            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+        },
+        {
+            title: 'juice',
+            price: 27,
+            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+        },
+        {
+            title: 'tomato',
+            price: 47,
+            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+        },
+        {
+            title: 'tea',
+            price: 15,
+            image: `https://e2.edimdoma.ru/data/ingredients/0000/1200/1200-ed4_wide.jpg?1515760357`
+        }];
+
+    products.forEach(product => {
+
+        const divProducts = document.createElement('div');
+        const h2Price = document.createElement('h2');
+        const h2Title = document.createElement('p');
+        const imgProducts = document.createElement('img');
+        h2Price.innerText = `${product.price}`;
+        h2Title.innerText = `${product.title}`;
+        imgProducts.src = `${product.image}`;
+        const createButton = document.createElement('button')
+        createButton.innerText = 'push me';
+
+
+
+
+
+          blockgoods.append(divProducts,createButton)
+        divProducts.append(h2Title,h2Price,imgProducts);
+
+
+
+    })
 
 
 
